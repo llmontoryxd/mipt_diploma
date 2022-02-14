@@ -1,0 +1,11 @@
+/mnt/d/work/MIPT/diploma/volume/unified2/CMakeFiles/rebuild_cache.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/CMakeFiles/edit_cache.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/src/Task/Task/CMakeFiles/rebuild_cache.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/src/Task/Task/CMakeFiles/edit_cache.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/src/Task/Task/CMakeFiles/task.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/src/Task/MeshBuilder/CMakeFiles/rebuild_cache.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/src/Task/MeshBuilder/CMakeFiles/edit_cache.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/src/Task/MeshBuilder/CMakeFiles/meshbuilder.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/src/Task/ResultCombiner/CMakeFiles/rebuild_cache.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/src/Task/ResultCombiner/CMakeFiles/edit_cache.dir
+/mnt/d/work/MIPT/diploma/volume/unified2/src/Task/ResultCombiner/CMakeFiles/resultcombiner.dir

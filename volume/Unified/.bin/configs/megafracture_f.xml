@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Settings dimsCount = "2">
+  <MeshBuilder>
+    <SalomeFile fileName="salome/fracture_coarse"/>
+    <Partition algorithm="METIS_PartMeshNodal"/>
+    <OutFile fileName="meshes/fracture_coarse[<domain>]"/>
+  </MeshBuilder>
+
+  <ResultCombiner>
+    <Snapshots count="300000"/>
+  </ResultCombiner>
+
+  <Mesh fileName="./meshes/fracture_coarse[<domain>].mesh" unfoldIterationsCount="0" minGridHeight="2e-4" moveMassCenter="false" collisionWidth = "0.001">
+    <MediumParams>
+      <PerSubmesh fileName = "./meshes/fracture_coarse[<domain>].params">
+        <Submesh index="0" pSpeed = "4500.0" sSpeed = "2500.0" rho = "2500.0" /> <!-- ground -->
+      </PerSubmesh> 
+    </MediumParams>
+
+    <Boundaries>
+      <Free interactionType= "0"/>
+      <Free interactionType= "1" />
+      <Free interactionType= "2" />
+      <Free interactionType= "3" />
+    </Boundaries>
+
+    <Contacts>
+      <Glide  interactionType= "1" />
+    </Contacts>
+  </Mesh>
+
+  <Snapshot>
+    <Period time="1e-2"/>    
+    <Data fileName = "out/snapshot[<domain>]<step>.vti"  writeVelocity="true" writeTension="true">
+      <Box    boxPoint1 = "0.0 0.0" boxPoint2 = "2100.0 2100.0" />
+      <Resolution resolution="500 500"/>
+    </Data>
+  </Snapshot>
+  <Detectors fileName="out/detectors[<domain>]<detector>.csv" />
+
+  <Schedule domainsCount="1"/>
+  
+  <Task destinationTime = "1000">
+    <IniState>
+      <BoxState boxPoint1 = "-5000 -5000" boxPoint2 = "5000 5000" velocity = "0.0 -1" />
+      <BerlageWave point= "600.0 1500.0" waveVector= "0.0 -1.0" waveLength= "100"/> 
+      <RickerWave  point = "0.0 -3000.0" waveVector = "0.0 10.0" waveLength = "1260"/>
+    </IniState>
+  </Task>
+
+
+
+  <Solver polynomialsOrder= "4" precision="double" integrator="RKF45" 
+        tolerance="1e-2" maxScale="1e-3" maxTimeStep="1e-1" hierarchyLevelsCount="1" 
+        allowMovement="false" allowPlasticity="false" allowDestruction="false " 
+        tensionErrorMult="1e-6" velocityErrorMult="1e-0" positionErrorMult="1e-0"
+        velocityDimensionlessMult="1e+0" tensionDimensionlessMult="1e+0"/>
+</Settings>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Settings dimsCount = "3">
+  <MeshBuilder>
+    <SalomeFile fileName= "salome/ball_hole_3d" />
+    <Partition algorithm="METIS_PartMeshNodal" /> 
+    <OutFile fileName= "meshes/ball_hole_3d[<domain>]" />
+  </MeshBuilder>
+
+  <ResultCombiner>
+    <Snapshots count="300000" />
+  </ResultCombiner>
+
+  <Mesh fileName="meshes/ball_hole_3d[<domain>].mesh" unfoldIterationsCount="0" minGridHeight="2e-4" moveMassCenter="false" collisionWidth = "0.001">
+    <MediumParams>
+      <PerSubmesh fileName = "meshes/ball_hole_3d[<domain>].params">
+        <Submesh index="0" pSpeed = "4300.0" sSpeed = "2400.0" rho = "2400.0" />
+      </PerSubmesh> 
+    </MediumParams>
+
+    <Boundaries>
+      <Absorb interactionType= "0"/>
+      <Symmetry interactionType= "1"/>
+      <Free interactionType= "2"/>
+      <Free interactionType= "3"/>
+    </Boundaries>
+  </Mesh>
+
+  <Snapshot>
+    <Period time="1e-5"/>    
+    <Data fileName = "out/snapshot[<domain>]<step>.vti"  writeVelocity="true" writeTension="false">
+      <Box    boxPoint1 = "0.0 0.0 0.0" boxPoint2 = "100.0 100.0 100.0"/>
+      <Resolution resolution="50 50 50" />
+    </Data>
+  </Snapshot>
+
+  <!-- <Detectors fileName="out/detectors[<domain>]<detector>.csv" locationsFileName="meshes/detectorsLocations.loc" samplesPeriod="10"/> -->
+
+  <Schedule domainsCount="1"/>
+
+  <Task destinationTime = "5e-1">
+    <IniState>
+      <!-- <BoxState boxPoint1 = "-5000 -5000" boxPoint2 = "5000 5000" velocity = "0.0 -1" />  -->
+      <!-- <BerlageWave point= "1 1 1" waveVector= "1.0 1.0 1.0" waveLength= "100" shear="false"/> -->
+      <RickerWave  point = "10 10 10" waveVector = "1.0 1.0 1.0" waveLength = "150"/>
+    </IniState>
+  </Task>
+
+
+   <!--<Solver polynomialsOrder= "4" precision="double" integrator="RKF45" 
+        tolerance="1e-0" maxScale="1e-4" maxTimeStep="1e-2" hierarchyLevelsCount="1" 
+        allowMovement="false" allowPlasticity="false" allowDestruction="false " 
+        tensionErrorMult="1e-6" velocityErrorMult="1e-0" positionErrorMult="1e-0"
+        velocityDimensionlessMult="1e+0" tensionDimensionlessMult="1e+0"/>-->
+
+   <Solver polynomialsOrder= "1" precision="double" integrator="DormandPrince"
+        tolerance="1e-0" maxScale="1e-3" maxTimeStep="1e-4" hierarchyLevelsCount="1" 
+        allowMovement="false" allowPlasticity="false" allowDestruction="false" 
+        tensionErrorMult="1e-7" velocityErrorMult="1e-0" positionErrorMult="1e-0"
+        velocityDimensionlessMult="1e+0" tensionDimensionlessMult="1e+0"/>
+
+
+  <ResultCombiner>
+    <Snapshots count="300000" />
+
+    <Seismograms
+      velocityCsvName="out/velocity_data.csv"
+      pressureCsvName="out/pressure_data.csv"
+      velocityCoordSegyName="out/velocity_<coord>.segy"/>    
+  </ResultCombiner>          
+</Settings>

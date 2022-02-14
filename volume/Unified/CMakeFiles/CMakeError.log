@@ -1,0 +1,124 @@
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+The MPI test test_mpi for C in mode normal failed to compile with the following output:
+Change Dir: /mnt/d/work/mipt/diploma/volume/Unified/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1a3b1/fast && /usr/bin/make -f CMakeFiles/cmTC_1a3b1.dir/build.make CMakeFiles/cmTC_1a3b1.dir/build
+make[1]: Entering directory '/mnt/d/work/mipt/diploma/volume/Unified/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1a3b1.dir/test_mpi.c.o
+/usr/bin/cc   -mtune=native -funroll-loops -ftree-vectorize -mfpmath=sse -ffast-math -ftree-vectorizer-verbose=0    -o CMakeFiles/cmTC_1a3b1.dir/test_mpi.c.o   -c /usr/share/cmake-3.16/Modules/FindMPI/test_mpi.c
+/usr/share/cmake-3.16/Modules/FindMPI/test_mpi.c:1:10: fatal error: mpi.h: No such file or directory
+    1 | #include <mpi.h>
+      |          ^~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_1a3b1.dir/build.make:66: CMakeFiles/cmTC_1a3b1.dir/test_mpi.c.o] Error 1
+make[1]: Leaving directory '/mnt/d/work/mipt/diploma/volume/Unified/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1a3b1/fast] Error 2
+
+
+
+The MPI test test_mpi for CXX in mode normal failed to compile with the following output:
+Change Dir: /mnt/d/work/mipt/diploma/volume/Unified/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_23d67/fast && /usr/bin/make -f CMakeFiles/cmTC_23d67.dir/build.make CMakeFiles/cmTC_23d67.dir/build
+make[1]: Entering directory '/mnt/d/work/mipt/diploma/volume/Unified/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_23d67.dir/test_mpi.cpp.o
+/usr/bin/c++    -std=c++11 -mtune=native -funroll-loops -mfpmath=sse -ffast-math -ftree-vectorize -ftree-vectorizer-verbose=0    -o CMakeFiles/cmTC_23d67.dir/test_mpi.cpp.o -c /mnt/d/work/mipt/diploma/volume/Unified/CMakeFiles/FindMPI/test_mpi.cpp
+/mnt/d/work/mipt/diploma/volume/Unified/CMakeFiles/FindMPI/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+    1 | #include <mpi.h>
+      |          ^~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_23d67.dir/build.make:66: CMakeFiles/cmTC_23d67.dir/test_mpi.cpp.o] Error 1
+make[1]: Leaving directory '/mnt/d/work/mipt/diploma/volume/Unified/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_23d67/fast] Error 2
+
+
+

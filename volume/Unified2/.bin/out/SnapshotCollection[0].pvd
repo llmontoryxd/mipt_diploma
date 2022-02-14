@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<VTKFile type="Collection" version="0.1" byte_order="LittleEndian">
+<Collection>
+<DataSet timestep="0" group="" part="0" file="out/snapshot[000]000000.vti"/>
+<DataSet timestep="1e-05" group="" part="0" file="out/snapshot[000]000004.vti"/>
+<DataSet timestep="2e-05" group="" part="0" file="out/snapshot[000]000009.vti"/>
+<DataSet timestep="3e-05" group="" part="0" file="out/snapshot[000]000014.vti"/>
+<DataSet timestep="4e-05" group="" part="0" file="out/snapshot[000]000020.vti"/>
+<DataSet timestep="5e-05" group="" part="0" file="out/snapshot[000]000026.vti"/>
+<DataSet timestep="6e-05" group="" part="0" file="out/snapshot[000]000033.vti"/>
+<DataSet timestep="7e-05" group="" part="0" file="out/snapshot[000]000040.vti"/>
+<DataSet timestep="8e-05" group="" part="0" file="out/snapshot[000]000048.vti"/>
+<DataSet timestep="9e-05" group="" part="0" file="out/snapshot[000]000057.vti"/>

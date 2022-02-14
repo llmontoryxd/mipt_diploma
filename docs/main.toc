@@ -1,0 +1,3 @@
+\babel@toc {russian}{}\relax 
+\contentsline {chapter}{Введение}{3}{}%
+\contentsline {chapter}{\numberline {1}Модель среды}{4}{}%
