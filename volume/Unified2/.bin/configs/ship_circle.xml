@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Settings dimsCount = "2">
+
+  <MeshBuilder>
+    <SalomeFile fileName= "salome/iceship" />
+    <Partition algorithm="METIS_PartMeshNodal" /> 
+    <OutFile fileName= "meshes/iceship[<domain>]" />
+  </MeshBuilder>
+
+  <ResultCombiner>
+    <Snapshots count="300000" />
+  </ResultCombiner>
+
+  <Mesh fileName="meshes/iceship[<domain>].mesh" unfoldIterationsCount="0" minGridHeight="2e-4" moveMassCenter="false" collisionWidth= "0.018"> 
+    <MediumParams>
+      <PerSubmesh fileName = "meshes/iceship[<domain>].params">
+        <Submesh index="1" E="200e+9" G="75e+9" rho= "7500" fixed="false" internalContactType= "2" /> 
+        <Submesh index="0" E="5e+9" G="1.87e+9" rho= "920" k= "2.2e+5" alpha="0" brittle="false" internalContactType= "0" maxPlasticDeform="0.006" powderShearMult="0.1"/> 
+      </PerSubmesh> 
+    </MediumParams>
+
+    <Boundaries>
+      <Free interactionType= "0"/>
+      <Free interactionType= "1" dynamicContactInteractionType= "1"/>
+      <Free interactionType= "2"/>
+    </Boundaries>
+
+    <Contacts>
+      <Glue interactionType= "0" dynamicBoundaryInteractionType= "0" maxLongitudinalStress="1.2e+6" />
+      <Glide interactionType= "1"/>
+      <Glue interactionType= "2"/>
+    </Contacts>
+  </Mesh>
+
+  <Snapshot>
+    <Period frames="100" />
+    <Data fileName = "out/ship_circle/ship_circle[<domain>]<step>.vti"  writeVelocity="true" writeTension="true">
+      <Box boxPoint1 = "0.0 0.0" boxPoint2 = "10.0 5.0" />
+      <Resolution resolution="400 400" />
+    </Data>
+    <Mesh     fileName="out/ship_circle/ship_circle_mesh_full[<domain>]<step>.vtk" />
+    <Contacts fileName="out/ship_circle/ship_circle_contacts_full[<domain>]<step>.vtk" />
+    <Boundaries fileName="out/ship_circle/ship_circle_boundaries_full[<domain>]<step>.vtk" />
+  </Snapshot>
+
+  <Schedule domainsCount="1"/>
+
+  <Task destinationTime = "5.0">
+    <IniState>
+      <BoxState boxPoint1 = "0.0 1.5" boxPoint2 = "10.0 5.0" velocity = "0.0 -100.0" />
+    </IniState>
+  </Task>
+
+  <!--<Solver polynomialsOrder= "1" precision="double" integrator="RK4" 
+        tolerance="1e-1" maxScale="1e-4" maxTimeStep="1e-8" hierarchyLevelsCount="1"
+        allowMovement="true" allowPlasticity="true"  allowDestruction="true"
+        allowContinuousDestruction="true" allowDiscreteDestruction="true"
+        tensionErrorMult="1e-6" velocityErrorMult="1e-2" positionErrorMult="1e-5"
+        velocityDimensionlessMult="1e+0" tensionDimensionlessMult="1e+0">
+        <Erosion cellAspectRatio="6" minHeightRatio="0.0" maxPlasticDeformation="0.1"/>Ц
+  </Solver> -->
+
+  <Solver polynomialsOrder= "1" precision="double" integrator="DormandPrince" 
+        tolerance="1e-0" maxScale="1e-0" maxTimeStep="1e-5" hierarchyLevelsCount="1"
+        allowMovement="true" allowPlasticity="true"  allowDestruction="true"
+        allowContinuousDestruction="true" allowDiscreteDestruction="false"
+        tensionErrorMult="1e-7" velocityErrorMult="1e-2" positionErrorMult="1e-0"
+        velocityDimensionlessMult="1e+0" tensionDimensionlessMult="1e+0">
+        <Erosion cellAspectRatio="6" minHeightRatio="0.0" maxPlasticDeformation="0.1"/>
+  </Solver>
+
+</Settings>
