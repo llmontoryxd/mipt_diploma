@@ -1,0 +1,2 @@
+submesh maxPlacticDeform: 0.06
+erosion maxPlasticDeformation: 0.1

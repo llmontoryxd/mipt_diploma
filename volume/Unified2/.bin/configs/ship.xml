@@ -20,9 +20,13 @@
     </MediumParams>
 
     <Boundaries>
-      <Free interactionType= "0"/>
+      <Free interactionType= "0" dynamicContactInteractionType= "1"/>
       <Free interactionType= "1" dynamicContactInteractionType= "1"/>
-      <Free interactionType= "2"/>
+      <Free interactionType= "2">
+        <ExternalForce>
+          <ConstFunctor value= "0.0 -1e+6 0.0" />
+        </ExternalForce>
+      </Free>
     </Boundaries>
 
     <Contacts>
@@ -33,21 +37,21 @@
   </Mesh>
 
   <Snapshot>
-    <Period frames="100" />
-    <Data fileName = "out/ship/ship[<domain>]<step>.vti"  writeVelocity="true" writeTension="true">
-      <Box boxPoint1 = "0.0 0.0" boxPoint2 = "10.0 5.0" />
+    <Period time="0.1" />
+    <Data fileName = "out/ship/ship_0_006_0_1/ship[<domain>]<step>.vti"  writeVelocity="true" writeTension="true">
+      <Box boxPoint1 = "0.0 -1.0" boxPoint2 = "10.0 5.0" />
       <Resolution resolution="400 400" />
     </Data>
-    <Mesh     fileName="out/ship/ship_mesh_full[<domain>]<step>.vtk" />
-    <Contacts fileName="out/ship/ship_contacts_full[<domain>]<step>.vtk" />
-    <Boundaries fileName="out/ship/ship_boundaries_full[<domain>]<step>.vtk" />
+    <Mesh     fileName="out/ship/ship_0_006_0_1/ship_mesh_full[<domain>]<step>.vtk" />
+    <Contacts fileName="out/ship/ship_0_006_0_1/ship_contacts_full[<domain>]<step>.vtk" />
+    <Boundaries fileName="out/ship/ship_0_006_0_1/ship_boundaries_full[<domain>]<step>.vtk" />
   </Snapshot>
 
   <Schedule domainsCount="1"/>
 
-  <Task destinationTime = "5.0">
+  <Task destinationTime = "1.0">
     <IniState>
-      <BoxState boxPoint1 = "0.0 1.5" boxPoint2 = "10.0 5.0" velocity = "0.0 -10.00" />
+      <BoxState boxPoint1 = "0.0 1.5" boxPoint2 = "10.0 5.0" velocity = "0.0 0.00" />
     </IniState>
   </Task>
 
@@ -61,11 +65,12 @@
   </Solver> -->
 
   <Solver polynomialsOrder= "1" precision="double" integrator="DormandPrince" 
-        tolerance="1e-0" maxScale="1e-0" maxTimeStep="1e-5" hierarchyLevelsCount="1"
+        tolerance="1e-0" maxScale="1e-0" maxTimeStep="1e-6" hierarchyLevelsCount="1"
         allowMovement="true" allowPlasticity="true"  allowDestruction="true"
         allowContinuousDestruction="true" allowDiscreteDestruction="false"
         tensionErrorMult="1e-7" velocityErrorMult="1e-2" positionErrorMult="1e-0"
         velocityDimensionlessMult="1e+0" tensionDimensionlessMult="1e+0">
+        <Erosion cellAspectRatio="6" minHeightRatio="0.0" maxPlasticDeformation="0.1"/>
   </Solver>
 
 </Settings>

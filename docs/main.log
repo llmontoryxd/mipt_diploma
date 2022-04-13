@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.6)  8 FEB 2022 01:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.6)  21 MAR 2022 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -529,38 +529,73 @@ Overfull \vbox (7.7362pt too high) has occurred while \output is active []
 Overfull \vbox (8.26465pt too high) has occurred while \output is active []
 
 
-[8] (./main.aux) ) 
+[8]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
+[9
+
+]
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
+<task_ship.jpg, id=49, 1009.52156pt x 532.23843pt>
+File: task_ship.jpg Graphic file (type jpg)
+<use task_ship.jpg>
+Package pdftex.def Info: task_ship.jpg  used on input line 245.
+(pdftex.def)             Requested size: 225.0pt x 118.61961pt.
+<task_circle_ship.jpg, id=50, 1012.5328pt x 545.03625pt>
+File: task_circle_ship.jpg Graphic file (type jpg)
+<use task_circle_ship.jpg>
+Package pdftex.def Info: task_circle_ship.jpg  used on input line 249.
+(pdftex.def)             Requested size: 225.0pt x 121.11424pt.
+
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 244--251
+[]$[]$  $[]$ 
+ []
+
+[10
+
+ <./task_ship.jpg> <./task_circle_ship.jpg>]
+Overfull \vbox (7.7362pt too high) has occurred while \output is active []
+
+
+[11] [12
+
+] [13
+
+] [14
+
+] [15
+
+] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 4168 strings out of 478599
- 58792 string characters out of 5855596
- 386847 words of memory out of 5000000
- 22003 multiletter control sequences out of 15000+600000
+ 4192 strings out of 478599
+ 59209 string characters out of 5855596
+ 386860 words of memory out of 5000000
+ 22024 multiletter control sequences out of 15000+600000
  417648 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,66p,583b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/Work/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-
-super-t2a.enc}<d:/Work/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8
-.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:
-/Work/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/Work
-/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Work/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Work/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Work/texlive/2021/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Work/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Work/texlive/2021/texmf-dist/
-fonts/type1/public/cm-super/sfbx1200.pfb><d:/Work/texlive/2021/texmf-dist/fonts
-/type1/public/cm-super/sfbx1440.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type
-1/public/cm-super/sfbx1728.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/pub
-lic/cm-super/sfbx2488.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/c
-m-super/sfrm1200.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1440.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sf
-rm2074.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsl120
-0.pfb>
-Output written on main.pdf (8 pages, 218252 bytes).
+ 57i,9n,66p,636b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/Work/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-su
+per-t2a.enc}<d:/Work/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.p
+fb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+d:/Work/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/W
+ork/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/Work/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Work/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Work/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Work/texlive/2021/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Work/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Work/texlive/2021/texmf-dist/fo
+nts/type1/public/cm-super/sfbx1200.pfb><d:/Work/texlive/2021/texmf-dist/fonts/t
+ype1/public/cm-super/sfbx1440.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/
+public/cm-super/sfbx1728.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/publi
+c/cm-super/sfbx2488.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/cm-
+super/sfrm1200.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/cm-super
+/sfrm1440.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm
+2074.pfb><d:/Work/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsl1200.
+pfb>
+Output written on main.pdf (15 pages, 302042 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
